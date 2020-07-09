@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>chisel</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="{{url_for('static', filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/modal-video/css/modal-video.min.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span>c</span>hisel</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container">
+      <h1>Welcome to chisel</h1>
+      <h2>Let us scuplt the perfect Resume Portfolio...</h2>
+      <img src="{{url_for('static', filename='img/hero-img.png')}}" alt="Hero Imgs">
+      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+      <div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+      </div>
+    </div>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Get Started Section
+  ============================-->
+  <section id="get-started" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Build your own Resume Portfolio</h2>
+        <p class="separator">Generate a completely filled-in Resume Portfolio, ready to be hosted.</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="{{url_for('static', filename='img/svg/cloud.svg')}}" alt="img" class="img-fluid">
+            <h4>Host-Ready Website</h4>
+            <p>Generate a ready to host site in just a matter of minutes.</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="{{url_for('static', filename='img/svg/planet.svg')}}" alt="img" class="img-fluid">
+            <h4>User Friendly Interface</h4>
+            <p>Easy to navigate and use UI, Dropdown menus and simple text fields</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="{{url_for('static', filename='img/svg/asteroid.svg')}}" alt="img" class="img-fluid">
+            <h4>Beautiful Templates</h4>
+            <p>Absolutely stunning portfolio designs. Updated regularly.</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    About Us Section
+  ============================-->
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-5 col-lg-3">
+          <img src="img/about-img.png" alt="About">
+        </div>
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2><span>chisel</span>Resume Portfolio Builder</h2>
+            <p>chisel is a state-of-the-art Resume Portfolio builder, based on Flask, using Bootstrap enabled templates obtained from freecss.com or bootstrapmade.com to render breath taking resume portfolios.
+            </p>
+
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>Creative Designs</li>
+              <li><i class="fa fa-angle-right"></i>Bootstrap Enabled</li>
+              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
+              <li><i class="fa fa-angle-right"></i>Easy to Deploy</li>
+              <li><i class="fa fa-angle-right"></i>Quick</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Features Section
+  ============================-->
+
+  <section id="features" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Amazing Features.</h2>
+        <p class="separator">Some of chisel's best features are proudly presented.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/paint-palette.svg')}}" alt="img" class="img-fluid">
+            <h4>Creative designs</h4>
+            <p>A handful of incredible css templates to build the resume portfolio from.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/vector.svg')}}" alt="img" class="img-fluid">
+            <h4>Bootstrap enabled</h4>
+            <p>Makes smart use of bootstrap grid system in responsive website design.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/design-tool.svg')}}" alt="img" class="img-fluid">
+            <h4>Easy to Use</h4>
+            <p>No confusing UI elements or menus, minimal with ease of use in mind.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/asteroid.svg')}}" alt="img" class="img-fluid">
+            <h4>Easy to Deploy</h4>
+            <p>Generates ready to deploy templates, suitable for immmediate web hosting.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/asteroid.svg')}}" alt="img" class="img-fluid">
+            <h4>Quick</h4>
+            <p>Build your resume portfolio in a matter of minutes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/cloud-computing.svg')}}" alt="img" class="img-fluid">
+            <h4>Regular Updates</h4>
+            <p>New designs are added and existing ones tweaked to perfect functionality.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/pixel.svg')}}" alt="img" class="img-fluid">
+            <h4>Free to Use</h4>
+            <p>Free to Use and no hassle or signing up required.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="{{url_for('static', filename='img/svg/code.svg')}}" alt="img" class="img-fluid">
+            <h4>Open Source</h4>
+            <p>Transparent experience assured by open source code.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Newsletter Section
+  ============================-->
+  <section id="newsletter" class="newsletter text-center wow fadeInUp">
+    <div class="overlay padd-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-md-9 col-lg-6">
+            <form class="form-inline" method="POST" action="#">
+
+              <input type="email" class="form-control " placeholder="Email Adress" name="email">
+              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+
+            </form>
+
+          </div>
+        </div>
+
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Contact Section
+  ============================-->
+  <section id="contact" class="padd-section wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Contact Me</h2>
+        <p class="separator">HMU if you have suggestions, wants to appreciate me, or buy me a coffee.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-lg-3 col-md-4">
+
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>Somewhere on localhost:/</p>
+            </div>
+
+            <div class="email">
+              <i class="fa fa-envelope"></i>
+              <p>samarmusthafa2014@gmail.com</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 9074002890</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/god-s-perfect-idiot/" class="twitter"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/aberrant_entropy/" class="facebook"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/samar-musthafa-og/" class="instagram"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.hackerearth.com/@samarmusthafa2014" class="google-plus"><i class="fa fa-header"></i></a>
+            <a href="https://www.hackerrank.com/samarmusthafa201" class="linkedin"><i class="fa fa-h-square"></i></a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #contact -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">chisel</a>
+            <p>Your opinions and suggestions are valuable to me. This will help me grow and be more helpful. Keep in mind that the data you provide is safe and never recorded.</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu centered">
+
+            <h4>About Me</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#about-us">About Me</a></li>
+              <li><a href="#">Donate</a></li>
+              <li><a href="#">Copyright</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights chisel. All rights reserved.</p>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+          -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{url_for('static', filename='lib/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/jquery/jquery-migrate.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/hoverIntent.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/superfish.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/easing/easing.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/modal-video/js/modal-video.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/wow/wow.min.js')}}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{{url_for('static', filename='contactform/contactform.js')}}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+</body>
+</html>
