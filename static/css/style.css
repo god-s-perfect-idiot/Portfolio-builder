@@ -1199,6 +1199,14 @@ body.mobile-nav-active #mobile-nav-toggle i {
   display: flex;
   flex-direction: row;
 }
+.icon{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 50px;
+}
+.skill-list{
+  padding-bottom: 10px;
+}
 .description{
   border-color: Transparent;
   border-width: 1px;
@@ -1219,15 +1227,32 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #contact {
   background: #fff;
 }
+.progress-row{
+  padding-top: 10px;
+}
 
 #contact .info {
   color: #222;
+}
+
+.progress-bar-success{
+  background-color: #71c55d;
 }
 
 #contact .info i {
   font-size: 32px;
   color: #71c55d;
   float: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 #contact .info p {
@@ -1400,7 +1425,10 @@ body {
 }
 .footer-b{
   background: #ffffff;
-  padding-top: 550px;
+  padding-top: 950px;
+}
+.domain-name{
+  padding-top: 10px;
 }
 .footer-b .footer-logo .navbar-brand {
   color: #fff;
