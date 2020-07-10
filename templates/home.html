@@ -1,235 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1024">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Cred.IT</title>
-  <!--stylesheet-->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" type="text/css">
-  <link href="{{url_for('static', filename='css/custom-responsive-styles.css')}}" rel="stylesheet" type="text/css">
-  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet" type="text/css">
-  <!--scripts-->
-  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js')}}"></script>
-  <script type="text/javascript" src="{{url_for('static', filename='js/all-plugins.js')}}"></script>
-  <script type="text/javascript" src="{{url_for('static', filename='js/plugins-activate.js')}}"></script>
+  <meta charset="utf-8">
+  <title>chisel</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="{{url_for('static', filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/modal-video/css/modal-video.min.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
-<body id="page-top">
-  <!-- Navigation -->
-  <div class="logo">
-    <i class="fa fa-dollar" aria-hidden="true"><span>Cred.IT</span></i>
-  </div>
-  <a class="menu-toggle rounded" href="#">
-    <i class="fa fa-bars"></i>
-  </a>
-  <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a class="smooth-scroll" href="#Header"></a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a href={{ url_for('home') }}>Home</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="smooth-scroll" href="#About">About</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="smooth-scroll" href="#Services">Services</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="smooth-scroll" href="#SiteMap">SiteMap</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="smooth-scroll" href="#Contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- Header Starts -->
-  <section id="Banner" class="content-section">
-    <div class="container content-wrap text-center">
-      <h1>Cred.IT</h1>
-      <h3>
-        <em >Simple. Dynamic. Elegant. Credit Management Redefined.</em>
-      </h3>
-      <a class="btn btn-primary btn-xl" href="{{ url_for('users') }}">Launch App</a>
-    </div>
-    <div class="overlay"></div>
-  </section>
-  <!-- Header Ends -->
-  <!-- About Us Starts -->
-  <section id="About" class="content-section">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="block-heading">
-            <h2>About Me</h2>
-          </div>
-          <p class="lead">Samar Musthafa.
-            <br>Data scientist, Content writer and dedicated Python Developer.
-            <br>That one person you will run to, to get the job done.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About Us Starts -->
-  <section id="Services" class="content-section text-center">
-    <div class="container">
-      <div class="block-heading">
-        <h2>Cred.IT services</h2>
-        <p>Credit Management and services done right.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="service-box">
-            <div class="service-icon yellow">
-              <div class="front-content">
-                <i class="fa fa-users" aria-hidden="true"></i>
-                <h3>View Users</h3>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>View Users</h3>
-              <p>Get the list of all available users registered with the service.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="service-box">
-            <div class="service-icon orange">
-              <div class="front-content">
-                <i class="fa fa-user"></i>
-                <h3>User Details</h3>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>User Details</h3>
-              <p>Get personal details about every individual user.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="service-box ">
-            <div class="service-icon red">
-              <div class="front-content">
-                <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                <h3>Transfer Credits</h3>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>Transfer Credits</h3>
-              <p>Transfer individual credits to any other user registered with the service.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="service-box">
-            <div class="service-icon grey">
-              <div class="front-content">
-                <i class="fa fa-file-text-o"></i>
-                <h3>Transfer Statement</h3>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>Transfer Statement</h3>
-              <p>Get credit transfer statement of every user.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- SITEMAP -->
-  <section id="SiteMap" class="content-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="block-heading">
-            <h2>Sitemap</h2>
-            <p>Home Page . View all Users . Select User . Transfer Credits . Select Recipient</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END OF SITEMAP -->
-  <section id="Contact" class="content-section">
-    <div class="container">
-      <div class="block-heading">
-        <h2>Contact Me</h2>
-        <p>If you found any issues, or would like to see my other works, or to buy me a coffee, HMU.</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="contact-wrapper">
-            <div class="address-block border-bottom">
-              <h3 class="add-title">Developer Profiles</h3>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span><span class="c-info"><a href="https://www.linkedin.com/in/samar-musthafa-og/">&nbsp;LinkedIn</a></span>
-              </div>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-github" aria-hidden="true"></i></span><span class="c-info"><a href="https://github.com/god-s-perfect-idiot">GitHub</a></span>
-              </div>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-header" aria-hidden="true"></i></span><span class="c-info"><a href="https://www.hackerearth.com/@samarmusthafa2014">HackerEarth</a></span>
-              </div>
-            </div>
-            <div class="address-block">
-              <h3 class="add-title">Social Media Profiles</h3>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-instagram" aria-hidden="true"></i></span><span class="c-info"><a href="https://www.instagram.com/aberrant_entropy/">&nbsp;Instagram</a></span>
-              </div>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-twitter" aria-hidden="true"></i></span><span class="c-info"><a href="https://twitter.com/Samar29423177">Twitter</a></span>
-              </div>
-              <div class="c-detail">
-                <span class="c-icon"><i class="fa fa-globe" aria-hidden="true"></i></span><span class="c-info"><a href="https://samarmusthafa2014.wixsite.com/home">Wix</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="form-wrap">
-            <form action="javascript:void(0)" method="post">
-              <div class="fname floating-label">
-                <input type="text" class="floating-input" name="full name" />
-                <label for="title">First Name</label>
-              </div>
-              <div class="fname floating-label">
-                <input type="text" class="floating-input" name="full name" />
-                <label for="title">Last Name</label>
-              </div>
-              <div class="email floating-label">
-                <input type="email" class="floating-input" name="email" />
-                <label for="email">Email</label>
-              </div>
-              <div class="contact floating-label">
-                <input type="tel" class="floating-input" name="contact" />
-                <label for="email">Mobile</label>
-              </div>
-              <div class="company floating-label">
-                <textarea type="text" class="floating-input" name="company" /></textarea>
-                <label for="email">Message</label>
-              </div>
-              <div class="submit-btn">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer text-center">
-    <div class="container">
-      <p class="text-muted small mb-0">Copyright © Cred.IT 2020</p>
-      <p class="text-muted small mb-0">Developed by <a href="https://samarmusthafa2014.wixsite.com/home" target="_balnk">Samar Musthafa</p>
-    </div>
-  </footer>
-</body>
+<body>
 
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{{url_for('home')}}#body" class="scrollto"><span>c</span>hisel</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{{url_for('home')}}#hero">Home</a></li>
+          <li><a href="{{url_for('home')}}#about-us">About</a></li>
+          <li><a href="{{url_for('home')}}#features">Features</a></li>
+          <li><a href="{{url_for('home')}}#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center title-hud">About you</h1>
+    <form class="form-horizontal">
+      <h2>Personal Information</h2>
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" placeholder="John Doe">
+        </div>
+      </div>
+      <label class="col-sm-2 control-label">Four short titles</label>
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="title-1" placeholder="Lead Developer (Main)">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="title-2" placeholder="Content Writer">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="title-3" placeholder="Ethical Hacker">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="title-4" placeholder="Software Engineer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="johndoe@gmail.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone Number</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="number" placeholder="91 9326 457 472">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-10">
+          <textarea id="description" name="description" rows="10" class="form-control" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32."></textarea>
+        </div>
+      </div>
+      <h2 class="hud-int-titles">Skills</h2>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Rate your top 4 skills</label>
+        <div class="col-sm-10 skill-list">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="skill1name" placeholder="Python">
+            </div>
+            <div class="col-sm-2">
+              <input type="number" class="form-control" id="skill1level" placeholder="90">
+            </div>
+            <div class="col-sm-5 progress-row">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" id="skill1progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 skill-list">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="skill2name" placeholder="Ruby">
+            </div>
+            <div class="col-sm-2">
+              <input type="number" class="form-control" id="skill2level" placeholder="85">
+            </div>
+            <div class="col-sm-5 progress-row">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" id="skill2progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 skill-list">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="skill3name" placeholder="Julia">
+            </div>
+            <div class="col-sm-2">
+              <input type="number" class="form-control" id="skill3level" placeholder="80">
+            </div>
+            <div class="col-sm-5 progress-row">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" id="skill3progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 skill-list">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="skill4name" placeholder="R Script">
+            </div>
+            <div class="col-sm-2">
+              <input type="number" class="form-control" id="skill4level" placeholder="75">
+            </div>
+            <div class="col-sm-5 progress-row">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" id="skill4progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">A brief of six of your skills</label>
+        <div class="col-sm-10 skill-list">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-5 domain-name">
+              <div class="col-sm-12">
+                <div class="col-sm-12 skill-list">
+                  <input type="text" class="form-control" id="domain1name" placeholder="Web Development">
+                </div>
+                <label class="col-sm-12 control-label">ion icon tag</label>
+                <div class="col-sm-12 skill-list">
+                  <input type="text" class="form-control" id="domain1icon" placeholder="ion-monitor">
+                </div>
+                <div class=icon>
+                  <i id="domain1view" class="icon ion-monitor"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <textarea id="description" name="description" rows="10" class="form-control" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div></div>
+</div>
+<br/><br/>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer-b">
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights chisel. All rights reserved.</p>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+          -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{url_for('static', filename='lib/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/jquery/jquery-migrate.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/hoverIntent.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/superfish.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/easing/easing.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/modal-video/js/modal-video.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/wow/wow.min.js')}}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{{url_for('static', filename='contactform/contactform.js')}}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  <script>
+  $('#domain1icon').on('keyup', function(){
+    var value = this.value;
+    var bar =
+    $('#domain1view')
+      .attr('class', 'icon '+value)
+    }).keyup();
+  </script>
+  <script>
+    $('#skill1level').on('keyup', function(){
+      var value = this.value;
+      var bar =
+      $('#skill1progress')
+        .css('width', value+'%')
+        .attr('aria-valuenow', value);
+      }).keyup();
+      $('#skill2level').on('keyup', function(){
+        var value = this.value;
+        var bar =
+        $('#skill2progress')
+          .css('width', value+'%')
+          .attr('aria-valuenow', value);
+        }).keyup();
+        $('#skill3level').on('keyup', function(){
+          var value = this.value;
+          var bar =
+          $('#skill3progress')
+            .css('width', value+'%')
+            .attr('aria-valuenow', value);
+          }).keyup();
+          $('#skill4level').on('keyup', function(){
+            var value = this.value;
+            var bar =
+            $('#skill4progress')
+              .css('width', value+'%')
+              .attr('aria-valuenow', value);
+            }).keyup();
+  </script>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+</body>
 </html>
