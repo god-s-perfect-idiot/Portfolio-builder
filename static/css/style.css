@@ -1204,6 +1204,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   text-align: center;
   font-size: 50px;
 }
+.centered{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .skill-list{
   padding-bottom: 10px;
 }
@@ -1425,7 +1430,7 @@ body {
 }
 .footer-b{
   background: #ffffff;
-  padding-top: 950px;
+  padding-top: 2950px;
 }
 .domain-name{
   padding-top: 10px;
