@@ -1191,11 +1191,25 @@ body.mobile-nav-active #mobile-nav-toggle i {
   width: 35px;
   transition: 0.3s;
 }
-
+.title-hud{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.titles{
+  display: flex;
+  flex-direction: row;
+}
+.description{
+  border-color: Transparent;
+  border-width: 1px;
+  #box-shadow: 1px 1px #dddddd;
+}
 #newsletter ul li:hover {
   background: #55b03f;
 }
-
+.hud-int-titles{
+  padding-top: 50px;
+}
 #newsletter ul li .fa {
   color: #fff;
 }
@@ -1301,13 +1315,144 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #contact .form button[type="submit"]:hover {
   background: #92d283;
 }
+body {
+  padding-top: 20px;
+}
 
+/**
+ * Form control
+ */
+.form-control {
+  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  box-shadow: 0 1px 5px -2px rgba(0,0,0,.2);
+
+  &:focus {
+    box-shadow: 0 1px 5px -2px #42A5F5;
+    border-bottom: 1px solid #2196F3;
+  }
+
+}
+
+.form-group {
+  label {
+    color: #616161;
+  }
+}
+
+.form-control-validation(@text-color: #555; @border-color: #ccc; @background-color: #f5f5f5) {
+  // Color the label and help text
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: @text-color;
+  }
+  // Set the border and box shadow on specific inputs to match
+  .form-control {
+    border-color: @border-color;
+    &:focus {
+      border-color: darken(@border-color, 10%);
+      box-shadow: 0 1px 5px -2px @background-color;
+    }
+  }
+  // Set validation states also for addons
+  .input-group-addon {
+    color: @text-color;
+    border-color: @border-color;
+    background-color: @background-color;
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: @text-color;
+  }
+}
+
+.input-group-addon {
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  border-radius: 0;
+}
+
+// Feedback states
+.has-success {
+  .form-control-validation(#4CAF50; #4CAF50; #C8E6C9);
+}
+.has-warning {
+  .form-control-validation(#FF9800; #FF9800; #FFE0B2);
+}
+.has-error {
+  .form-control-validation(#F44336; #F44336; #FFCDD2);
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
   background: #2a2c30;
   padding-top: 50px;
+}
+.footer-b{
+  background: #ffffff;
+  padding-top: 550px;
+}
+.footer-b .footer-logo .navbar-brand {
+  color: #fff;
+  display: inline-block;
+  float: none;
+  font-family: "Philosopher", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  height: 100%;
+  letter-spacing: 0.2em;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.footer-b .footer-logo p {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-b .list-menu > h4 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.footer-b .list-menu ul li a {
+  color: #fff;
+  font-size: 12px;
+  padding-left: 5px;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.footer-b .copyrights {
+  background: #fff;
+  margin-top: 50px;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer-b .copyrights p, .footer-b .copyrights .credits {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.footer-b .copyrights p a, .footer-b .copyrights .credits a {
+  letter-spacing: 0;
+  color: #71c55d;
 }
 
 .footer .footer-logo .navbar-brand {
