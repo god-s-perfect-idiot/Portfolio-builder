@@ -317,7 +317,84 @@
           </div>
         </div>
       </div>
-
+      <div class="form-group">
+        <div class="col-sm-10 skill-list">
+          <label for="projectcount" class="col-sm-3 control-label">Projects Completed</label>
+          <div class="col-sm-12 titles">
+            <div class="col-sm-1 skills-icon">
+                <i class="ion-checkmark-round "></i>
+            </div>
+            <div class="col-sm-11">
+              <input type="number" class="form-control" id="projectcount" placeholder="55">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 skill-list">
+          <label for="interncount" class="col-sm-3 control-label">Internships Completed</label>
+          <div class="col-sm-12 titles">
+            <div class="col-sm-1 skills-icon">
+                <i class="ion-ios-calendar-outline "></i>
+            </div>
+            <div class="col-sm-11">
+              <input type="number" class="form-control" id="interncount" placeholder="5">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 skill-list">
+          <label for="honorcount" class="col-sm-3 control-label">Honors Achieved</label>
+          <div class="col-sm-12 titles">
+            <div class="col-sm-1 skills-icon">
+                <i class="ion-ribbon-a "></i>
+            </div>
+            <div class="col-sm-11">
+              <input type="number" class="form-control" id="honorcount" placeholder="5">
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="hud-int-titles">Projects</h2>
+      <div class="form-group"  id="projects">
+        <label class="col-sm-3 control-label"><h4 class="centered">&nbsp;PROJECT-1</h4></label>
+        <div class="col-sm-10 skill-list titles">
+          <div class="col-sm-12 titles">
+            <div class="col-sm-7">
+              <div class="col-sm-12">
+                <label class="col-sm-12 control-label">Project Title</label>
+                <div class="col-sm-12 skill-list">
+                  <input type="text" class="form-control" id="project1name" placeholder="My Project A">
+                </div>
+                <label class="col-sm-12 control-label">Project Technology</label>
+                <div class="col-sm-12 skill-list">
+                  <input type="text" class="form-control" id="project1tech" placeholder="Some Random Tech">
+                </div>
+                <label class="col-sm-12 control-label">Project Completed Date</label>
+                <div class="col-sm-12 skill-list">
+                  <input type="month" class="form-control" id="project1date" placeholder="01/2020">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="col-sm-12 skill-list project-cover">
+                <div class="file-upload">
+                  <div class="file-select">
+                    <div class="file-select-button" id="project1fileName">Choose File</div>
+                    <div class="file-select-name" id="project1noFile">No file chosen...</div>
+                    <input type="file" name="chooseFile" id="project1cover" accept="image/jpeg">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 skill-list">
+                <img id="project1prev" class="project-preview" src="">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <button class="page-b" id="addnew" type="button">
+            <i class="fa fa-plus"></i>
+          </button>
+          </div>
+        </div>
+      </div>
     </form>
   </div></div>
 </div>
@@ -432,6 +509,99 @@
               .css('width', value+'%')
               .attr('aria-valuenow', value);
             }).keyup();
+  </script>
+  <script id="dynamicscript">
+  $('#project1cover').bind('change', function () {
+    var filename = $("#project1cover").val();
+    if (/^\s*$/.test(filename)) {
+      $(".file-upload").removeClass('active');
+      $("#project1noFile").text("No file chosen...");
+    }
+    else {
+      $(".file-upload").addClass('active');
+      $("#project1noFile").text(filename.replace("C:\\fakepath\\", ""));
+    }
+  });
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#project1prev').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#project1cover").change(function(){
+    readURL(this);
+});
+  </script>
+  <script>
+    var count = 1;
+    $("#addnew").click(
+      function(){
+        window.count += 1;
+        $("#projects").append("<label class=\"col-sm-3 control-label\"><h4 class=\"centered\">&nbsp;PROJECT-"+count+"</h4></label>"+
+        "<div class=\"col-sm-10 skill-list titles\">"+
+          "<div class=\"col-sm-12 titles\">"+
+            "<div class=\"col-sm-7\">"+
+              "<div class=\"col-sm-12\">"+
+                "<label class=\"col-sm-12 control-label\">Project Title</label>"+
+                "<div class=\"col-sm-12 skill-list\">"+
+                  "<input type=\"text\" class=\"form-control\" id=\"project"+count+"name\" placeholder=\"My Project A\">"+
+                "</div>"+
+                "<label class=\"col-sm-12 control-label\">Project Technology</label>"+
+                "<div class=\"col-sm-12 skill-list\">"+
+                  "<input type=\"text\" class=\"form-control\" id=\"project"+count+"tech\" placeholder=\"Some Random Tech\">"+
+                "</div>"+
+                "<label class=\"col-sm-12 control-label\">Project Completed Date</label>"+
+                "<div class=\"col-sm-12 skill-list\">"+
+                  "<input type=\"month\" class=\"form-control\" id=\"project"+count+"date\" placeholder=\"01/2020\">"+
+                "</div>"+
+              "</div>"+
+            "</div>"+
+            "<div class=\"col-sm-5\">"+
+              "<div class=\"col-sm-12 skill-list project-cover\">"+
+                "<div class=\"file-upload\">"+
+                  "<div class=\"file-select\">"+
+                    "<div class=\"file-select-button\" id=\"project"+count+"fileName\">Choose File</div>"+
+                    "<div class=\"file-select-name\" id=\"project"+count+"noFile\">No file chosen...</div>"+
+                    "<input type=\"file\" name=\"chooseFile\" id=\"project"+count+"cover\" accept=\"image/jpeg\">"+
+                  "</div>"+
+                "</div>"+
+              "</div>"+
+              "<div class=\"col-sm-12 skill-list\">"+
+                "<img id=\"project"+count+"prev\" class=\"project-preview\" src=\"\">"+
+              "</div>"+
+            "</div>"+
+          "</div>"+
+        "</div>");
+        $("dynamicscript").append("$('#project"+count+"cover').bind('change', function () {"+
+          "var filename = $(\"#project"+count+"cover\").val();"+
+          "if (/^\s*$/.test(filename)) {"+
+            "$(\".file-upload\").removeClass('active');"+
+            "$(\"#project"+count+"noFile\").text(\"No file chosen...\");"+
+          "}"+
+          "else {"+
+            "$(\".file-upload\").addClass('active');"+
+            "$(\"#project"+count+"noFile\").text(filename.replace(\"C:\\fakepath\\\", \"\"));"+
+          "}"+
+        "});"+
+        "function readURL(input) {"+
+          "if (input.files && input.files[0]) {"+
+              "var reader = new FileReader();"+
+              "reader.onload = function (e) {"+
+                  "$('#project"+count+"prev').attr('src', e.target.result);"+
+              "}"+
+              "reader.readAsDataURL(input.files[0]);"+
+          "}"+
+      "}"+
+      "$(\"#project"+count+"cover\").change(function(){"+
+          "readURL(this);"+
+      "});");
+      }
+    );
   </script>
   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
   <script src="https://use.fontawesome.com/94b726376c.js"></script>
