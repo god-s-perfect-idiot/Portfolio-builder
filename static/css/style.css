@@ -56,6 +56,13 @@ li {
   line-height: 30px;
   text-transform: capitalize;
 }
+.final{
+  background-color: #71c55d;
+  border: none;
+  color:white;
+  width: 150px;
+  height:50px;
+}
 
 p {
   color: #505050;
@@ -1437,7 +1444,7 @@ body {
 }
 .footer-b{
   background: #ffffff;
-  padding-top: 4950px;
+  padding-top: 4550px;
 }
 .project-cover{
   padding-top: 20px;
