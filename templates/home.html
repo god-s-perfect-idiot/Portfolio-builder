@@ -74,6 +74,21 @@
         <div class="col-sm-10">
           <input type="text" class="form-control" id="name" placeholder="John Doe">
         </div>
+        <div class='col-sm-12 titles'>
+        <div class="col-sm-4 firstimage">
+          <div id="bgdiv" class="file-upload">
+            <label for="name" class="col-sm-10 control-label">Background Image (Dark background)</label>
+            <div class="file-select">
+              <div class="file-select-button" id="bgimage">Choose File</div>
+              <div class="file-select-name" id="bgimagename">No file chosen...</div>
+              <input type="file" name="chooseFile" id="bgimagefile" accept="image/jpeg">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <img id="bgimageprev" class="imageprev" src=""/>
+        </div>
+        </div>
       </div>
       <label class="col-sm-2 control-label">Four short titles</label>
       <div class="form-group">
@@ -107,6 +122,21 @@
         </div>
       </div>
       <div class="form-group">
+        <div class='col-sm-12 titles'>
+        <div class="col-sm-4">
+          <div id="fgdiv" class="file-upload">
+            <label for="name" class="col-sm-10 control-label">Your Image (Light background)</label>
+            <div class="file-select">
+              <div class="file-select-button" id="fgimage">Choose File</div>
+              <div class="file-select-name" id="fgimagename">No file chosen...</div>
+              <input type="file" name="chooseFile" id="fgimagefile" accept="image/jpeg">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <img id="fgimageprev" class="imageprev" src=""/>
+        </div>
+        </div>
         <label for="description" class="col-sm-2 control-label">Description</label>
         <div class="col-sm-10">
           <textarea id="description" name="description" rows="10" class="form-control" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -375,16 +405,13 @@
             </div>
             <div class="col-sm-5">
               <div class="col-sm-12 skill-list project-cover">
-                <div class="file-upload">
+                <div id="coverdiv" class="file-upload">
                   <div class="file-select">
                     <div class="file-select-button" id="project1fileName">Choose File</div>
                     <div class="file-select-name" id="project1noFile">No file chosen...</div>
                     <input type="file" name="chooseFile" id="project1cover" accept="image/jpeg">
                   </div>
                 </div>
-              </div>
-              <div class="col-sm-12 skill-list">
-                <img id="project1prev" class="project-preview" src="">
               </div>
             </div>
           </div>
@@ -469,8 +496,8 @@
         </div>
       </div>
     </div>
-    <div class="centered">
-      <button type='submit' class="final">Build Portfolio!</button>
+    <div class="centered hud-int-titles">
+      <button id="#submit" type='button' class="final">Build Portfolio!</button>
     </div>
     </form>
   </div></div>
@@ -519,6 +546,24 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  <script>
+  $("#submit").click(function(){
+      var formData = new FormData(document.getElementById(form));
+      $.ajax({
+        url: '/build',
+        data: formData,
+        type: 'POST',
+        success: function(response){
+          if(response==1){
+            console.log(response);
+          }
+        },
+        error: function(error){
+          console.log(error);
+        }
+      });
+  });
+  </script>
   <script>
   $('#domain1icon').on('keyup', function(){
     var value = this.value;
@@ -613,6 +658,56 @@
 $("#project1cover").change(function(){
     readURL(this);
 });
+$('#fgimagefile').bind('change', function () {
+  var filename = $("#fgimagefile").val();
+  if (/^\s*$/.test(filename)) {
+    $(".file-upload").removeClass('active');
+    $("#fgimagename").text("No file chosen...");
+  }
+  else {
+    $(".file-upload").addClass('active');
+    $("#fgimagename").text(filename.replace("C:\\fakepath\\", ""));
+  }
+});
+function readURL(input) {
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          $('#fgimageprev').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#fgimagefile").change(function(){
+  readURL(this);
+});
+$('#bgimagefile').bind('change', function () {
+  var filename = $("#bgimagefile").val();
+  if (/^\s*$/.test(filename)) {
+    $(".file-upload").removeClass('active');
+    $("#bgimagename").text("No file chosen...");
+  }
+  else {
+    $(".file-upload").addClass('active');
+    $("#bgimagename").text(filename.replace("C:\\fakepath\\", ""));
+  }
+});
+function readURL(input) {
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          $('#bgimageprev').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#bgimagefile").change(function(){
+  readURL(this);
+});
   </script>
   <script>
     var count = 1;
@@ -640,16 +735,13 @@ $("#project1cover").change(function(){
             "</div>"+
             "<div class=\"col-sm-5\">"+
               "<div class=\"col-sm-12 skill-list project-cover\">"+
-                "<div class=\"file-upload\">"+
+                "<div id=\"coverdiv\" class=\"file-upload\">"+
                   "<div class=\"file-select\">"+
                     "<div class=\"file-select-button\" id=\"project"+count+"fileName\">Choose File</div>"+
                     "<div class=\"file-select-name\" id=\"project"+count+"noFile\">No file chosen...</div>"+
                     "<input type=\"file\" name=\"chooseFile\" id=\"project"+count+"cover\" accept=\"image/jpeg\">"+
                   "</div>"+
                 "</div>"+
-              "</div>"+
-              "<div class=\"col-sm-12 skill-list\">"+
-                "<img id=\"project"+count+"prev\" class=\"project-preview\" src=\"\">"+
               "</div>"+
             "</div>"+
           "</div>"+
