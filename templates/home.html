@@ -395,6 +395,83 @@
           </div>
         </div>
       </div>
+      <h2 class="hud-int-titles">Testimonials</h2>
+      <div class="form-group"  id="testimonials">
+        <label class="col-sm-3 control-label"><h4 class="centered">&nbsp;TESTIMONIAL - 1 </h4></label>
+        <div class="col-sm-10 skill-list titles">
+          <div class="col-sm-12 titles">
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="testimonial1name" placeholder="Jean Doe">
+              </div>
+              <div class="col-sm-7">
+                <textarea id="testimonial1description" name="testimonial1description" rows="10" class="form-control" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+              </div>
+          </div>
+          <div class="col-sm-1">
+            <button class="page-b" id="testadd" type="button">
+            <i class="fa fa-plus"></i>
+          </button>
+          </div>
+      </div>
+    </div>
+    <h2 class="hud-int-titles">WEB PROFILES</h2>
+    <div class="form-group"  id="testimonials">
+      <div class="col-sm-10 skill-list titles">
+        <div class="col-sm-12 titles">
+            <div class="col-sm-1">
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <div class="col-sm-4">
+              <label class="col-sm-3 control-label">LinkedIn</label>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="linkedin" placeholder="www.example.com/1234">
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-10 skill-list titles">
+        <div class="col-sm-12 titles">
+            <div class="col-sm-1">
+                <i class="fa fa-github"></i>
+            </div>
+            <div class="col-sm-4">
+              <label class="col-sm-3 control-label">Github</label>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="github" placeholder="www.example.com/1234">
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-10 skill-list titles">
+        <div class="col-sm-12 titles">
+            <div class="col-sm-1">
+                <i class="fa fa-globe"></i>
+            </div>
+            <div class="col-sm-4">
+              <label class="col-sm-3 control-label">Blog</label>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="blog" placeholder="www.example.com/1234">
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-10 skill-list titles">
+        <div class="col-sm-12 titles">
+            <div class="col-sm-1">
+                <i class="fa fa-instagram"></i>
+            </div>
+            <div class="col-sm-4">
+              <label class="col-sm-3 control-label">Instagram</label>
+            </div>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="instagram" placeholder="www.example.com/1234">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="centered">
+      <button type='submit' class="final">Build Portfolio!</button>
+    </div>
     </form>
   </div></div>
 </div>
@@ -600,6 +677,25 @@ $("#project1cover").change(function(){
       "$(\"#project"+count+"cover\").change(function(){"+
           "readURL(this);"+
       "});");
+      }
+    );
+  </script>
+  <script>
+    var testcount = 1;
+    $("#testadd").click(
+      function(){
+        window.testcount += 1;
+        $("#testimonials").append("<label class=\"col-sm-3 control-label\"><h4 class=\"centered\">&nbsp;TESTIMONIAL - "+testcount+" </h4></label>"+
+        "<div class=\"col-sm-10 skill-list titles\">"+
+          "<div class=\"col-sm-12 titles\">"+
+              "<div class=\"col-sm-5\">"+
+                "<input type=\"text\" class=\"form-control\" id=\"testimonial"+testcount+"name\" placeholder=\"Jean Doe\">"+
+              "</div>"+
+              "<div class=\"col-sm-7\">"+
+                "<textarea id=\"testimonial"+testcount+"description\" name=\"testimonial"+testcount+"description\" rows=\"10\" class=\"form-control\" placeholder=\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"></textarea>"+
+              "</div>"+
+          "</div>"+
+      "</div>");
       }
     );
   </script>
