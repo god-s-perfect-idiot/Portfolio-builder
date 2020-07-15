@@ -1442,6 +1442,18 @@ body {
   background: #2a2c30;
   padding-top: 50px;
 }
+.firstimage{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.imageprev{
+  padding-top: 100px;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
 .footer-b{
   background: #ffffff;
   padding-top: 4550px;
