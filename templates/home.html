@@ -507,11 +507,59 @@
   <script src="{{url_for('static', filename='js/main.js')}}"></script>
   <script>
   $("#submit").click(function(){
-      var name = $("#name").value()
-      alert(name);
+      var Data = []
+      Data.push($("#name").val());
+      Data.push($("#title-1").val());
+      Data.push($("#title-2").val());
+      Data.push($("#title-3").val());
+      Data.push($("#title-4").val());
+      Data.push($("#email").val());
+      Data.push($("#number").val());
+      Data.push($("#skill1name").val());
+      Data.push($("#skill1level").val());
+      Data.push($("#skill2name").val());
+      Data.push($("#skill2level").val());
+      Data.push($("#skill3name").val());
+      Data.push($("#skill3level").val());
+      Data.push($("#skill4name").val());
+      Data.push($("#skill4level").val());
+      Data.push($("#domain1name").val());
+      Data.push($("#domain1icon").val());
+      Data.push($("#domain1description").val());
+      Data.push($("#domain2name").val());
+      Data.push($("#domain2icon").val());
+      Data.push($("#domain2description").val());
+      Data.push($("#domain3name").val());
+      Data.push($("#domain3icon").val());
+      Data.push($("#domain3description").val());
+      Data.push($("#domain4name").val());
+      Data.push($("#domain4icon").val());
+      Data.push($("#domain4description").val());
+      Data.push($("#domain5name").val());
+      Data.push($("#domain5icon").val());
+      Data.push($("#domain5description").val());
+      Data.push($("#domain6name").val());
+      Data.push($("#domain6icon").val());
+      Data.push($("#domain6description").val());
+      Data.push($("#projectcount").val());
+      Data.push($("#interncount").val());
+      Data.push($("#honorcount").val());
+      for(i=0;i<window.count;i++){
+        Data.push($("#project"+(i+1)+"name").val());
+        Data.push($("#project"+(i+1)+"tech").val());
+        Data.push($("#project"+(i+1)+"date").val());
+      }
+      for(i=0;i<window.testcount;i++){
+        Data.push($("#testimonial"+(i+1)+"name").val());
+        Data.push($("#testimonial"+(i+1)+"description").val());
+      }
+      Data.push($("#linkedin").val());
+      Data.push($("#github").val());
+      Data.push($("#blog").val());
+      Data.push($("#instagram").val());
       $.ajax({
-        url: '/build',
-        data: 1,
+        url: "/build",
+        data: {Data:Data, projectCount:window.count, testiCount:window.testcount},
         type: 'POST',
         success: function(response){
           if(response==1){
