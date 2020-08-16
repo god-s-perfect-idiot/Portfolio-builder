@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template, request, render_template_string
 import model
 import service
 
@@ -18,7 +18,8 @@ def build():
         Data = request.form.getlist('Data[]')
         project_count = request.form.get("projectCount")
         testi_count = request.form.get("testiCount")
-        service.update_pf(Data, pc, tc)
+        pf = service.update_pf(Data, project_count, testi_count)
+        return render_template_string(pf)
 
 if(__name__=="__main__"):
     app.run(debug=True)
