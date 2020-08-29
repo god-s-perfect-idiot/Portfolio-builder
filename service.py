@@ -1,12 +1,12 @@
 import model
-
-def return_webpage(pf):
-    pass
+from distutils.dir_util import copy_tree
+import os
+import shutil
+import gen
 
 def update_pf(Data, pc, tc):
 
     pf,projects = model.retrieve_pf()
-    print(Data)
 
     pf[4] = "   <title>"+Data[0]+"</title>"
     pf[32] = "      <a class=\"navbar-brand js-scroll\" href=\"#page-top\">"+Data[0]+"</a>"
@@ -73,4 +73,16 @@ def update_pf(Data, pc, tc):
         current += 2
     pf = pf[:updated_indx+10]+pf[422:]
 
-    return pf
+    s = " "
+
+    pf = s.join(pf)
+
+    copy_tree("layouts/template1","cache")
+
+    os.remove("cache/index.html")
+    with open("cache/index.html", "w") as f:
+        f.write(pf)
+
+    temp = gen.gen()
+    shutil.make_archive(temp,'zip',"cache/")
+    return temp
