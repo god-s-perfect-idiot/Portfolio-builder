@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, render_template_string, send_from_directory, abort, safe_join
+from flask import Flask, render_template, request, render_template_string, send_from_directory, abort, safe_join, send_file
 import model
 import service
 import os
@@ -14,6 +14,11 @@ def home():
 def hud():
     return render_template('home.html')
 
+@app.route("/try")
+def send(filename):
+    print("here")
+    return send_file(filename, as_attachment=True)
+
 @app.route("/build", methods=['POST'])
 def build():
     global prev
@@ -28,10 +33,7 @@ def build():
             print("Cleanup failed", prev)
         prev = temp+".zip"
         print(temp+".zip")
-        try:
-            return send_from_directory("/",filename=temp+".zip", as_attachment=True)
-        except FileNotFoundError:
-            abort(404)
+        send(temp+".zip")
 
 if(__name__=="__main__"):
     app.run(debug=True)
